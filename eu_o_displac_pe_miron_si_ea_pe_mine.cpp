@@ -5,7 +5,8 @@ using namespace std;
 
 int main() {
     char c;
-    int u, v, x, y, z, mx, mn, m, n, c1;
+    int w, u, v, x, y, z, mx, mn, m, n, c1, suma;
+    unsigned a, b;
     float x1;
     cout<<"introduceti un caracter: ";
     cin>>c;
@@ -39,7 +40,56 @@ int main() {
             if (c1%2==0) {
                 cout<<"introduceti un nr: ";
                 cin>>n;
-        }
+                cout<<endl;
+                suma=0;
+                u=n;
+                x=u;
+                z=x;
+                while (n) {
+                    m=n%10;
+                    n/=10;
+                    suma=suma+m;
+                }
+                while (u) {
+                    u/=10;
+                    v++;
+                }
+                while (x) {
+                    y=x%10+y*10;
+                    x/=10;
+                }
+                for (m=1;m<=z;++m) {
+                    w*=m;
+                }
+                v-=2;
+                cout<<"suma cifrelor este "<<suma<<"; in nr aveti atatea cifre: "<<v<<"; rasturnatul nrului: (NU MERGE)"<<y<<"; nrul dvs factorial este (NU MERGE)"<<w;
+            }
+            else {
+                cout<<"introduceti 2 nr";
+                cin>>a>>b;
+                cout<<endl;
+                u=a%b;
+                v=a/b;
+                while(a!=b) {
+                    if(a>b) {
+                        a-=b;
+                    }
+                    else {
+                        b-=a;
+                    }
+                }
+                cout<<"a%b="<<u<<", a/b="<<v<<", cel mai mare divizor comun: "<<a;
+            } break;
+        default:
+            cout<<"introduceti un nr";
+            cin>>u;
+            cout<<endl;
+            cout<<"divizorii:";
+            for (v=1; v<=u; ++v) {
+                if (u%v== 0)
+                cout<<v<<endl;
+            }
+            cout<<"nr de divizori: "<<"suma divizorilor: ";
     }
     return 0;
 }
