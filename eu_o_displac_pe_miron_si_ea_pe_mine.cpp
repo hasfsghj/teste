@@ -19,15 +19,15 @@ int suma_cifrelor(int n)
 int minimul(int u, int v, int x, int y, int z, int mn)
 {
     if (u < v)
-            mn = u;
-        else
-            mn = v;
-        if (x < mn)
-            mn = x;
-        if (y < mn)
-            mn = y;
-        if (z < mn)
-            mn = z;
+        mn = u;
+    else
+        mn = v;
+    if (x < mn)
+        mn = x;
+    if (y < mn)
+        mn = y;
+    if (z < mn)
+        mn = z;
 
     return mn;
 }
@@ -35,16 +35,16 @@ int minimul(int u, int v, int x, int y, int z, int mn)
 int cmmdc(unsigned a, unsigned b)
 {
     while (a != b)
-            {
-                if (a > b)
-                {
-                    a -= b;
-                }
-                else
-                {
-                    b -= a;
-                }
-            }
+    {
+        if (a > b)
+        {
+            a -= b;
+        }
+        else
+        {
+            b -= a;
+        }
+    }
     return a;
 }
 
@@ -65,7 +65,7 @@ int main()
         cin >> u >> v >> x >> y >> z;
         cout << endl;
         mx = max(max(max(max(u, v), x), y), z);
-        mn = minimul(u,v,x,y,z,mn);
+        mn = minimul(u, v, x, y, z, mn);
         cout << "cel mai mare nr: " << mx << ", cel mai mic nr: " << mn;
         break;
     case 'a' ... 'z':
@@ -123,21 +123,22 @@ int main()
             cout << endl;
             u = a % b;
             v = a / b;
-            cout << "a%b=" << u << ", a/b=" << v << ", cel mai mare divizor comun: " << cmmdc(a,b);
+            cout << "a%b=" << u << ", a/b=" << v << ", cel mai mare divizor comun: " << cmmdc(a, b);
         }
         break;
     default:
-        int nr_div=0, suma_div=0;
+        int nr_div = 0, suma_div = 0;
         cout << "introduceti un nr ";
         cin >> u;
         cout << endl;
         cout << "divizorii: ";
         for (v = 1; v <= u; ++v)
         {
-            if (u % v == 0) {
+            if (u % v == 0)
+            {
                 cout << v << endl;
-                nr_div++; //nr de divizori
-                suma_div+=v; //suma divizorilor
+                nr_div++;      // nr de divizori
+                suma_div += v; // suma divizorilor
             }
         }
         cout << "nr de divizori: " << nr_div << "\nsuma divizorilor: " << suma_div;
