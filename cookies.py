@@ -57,6 +57,7 @@ else:
             print("You have enough ingredients for 25 cookies!")
             if mylist[3]==1:
                     print("- 125g Chocolate chips")
+
             if mylist[4]==1:
                     print("- 125g Sriracha sauce")
             if mylist[5]==1:
