@@ -1,6 +1,7 @@
 {
     "C_Cpp.intelliSenseEngine": "Tag Parser",
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "iosfwd": "cpp"
     }
 }

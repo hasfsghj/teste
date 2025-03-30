@@ -1,0 +1,10 @@
+
+2 3 4 7 
+8 6 1 0 
+7 2 0 4 
+6 2 1 5 
+
+min_d_principala: 0
+max_d_principala: 6
+min_d_secundara: 1
+max_d_secundara: 7

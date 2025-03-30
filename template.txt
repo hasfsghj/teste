@@ -1,0 +1,11 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+int n;
+
+int main()
+{
+    ifstream rf("abc.in");
+    ofstream wf("abc.out");
+return 0;
+}
